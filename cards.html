@@ -8,50 +8,72 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="icon" href="./logo.png" sizes="32x32" type="image/png">
     <style>
-        .card{
+        .card-cust{
             /* max-width: 300px; */
             cursor: pointer;
             transition: 0.3s;
         }
 
-        .card:hover{
+        .card-cust:hover{
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
 
         .page-title{
             text-shadow: -1px -1px 0 rgba(0, 0, 0, 1), 1px -1px 0 rgba(0, 0, 0, 1), -1px 1px 0 rgba(0, 0, 0, 1), 1px 1px 0 rgba(0, 0, 0, 1);
         }
+
+        .loader{
+            z-index: 50;
+            background-color: rgba(0,0,0,1);
+        }
+
+        .fadeOut{
+            transition: 0.3;
+            animation-name: fadeOut;
+            animation-duration: 1s;
+        }
+
+        @keyframes fadeOut{
+            0%{ opacity: 1;}
+            100%{ opacity: 0; }
+        }
     </style>
 </head>
 <body>
 
+    <div class="loader position-fixed w-100 h-100 start-0 bottom-0 d-flex justify-content-center align-items-center" id="spinner">
+        <div class="spinner-grow text-white" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </div>
+
     <header class="container-fluid d-flex flex-wrap justify-content-center align-items-center p-2 shadow mb-5">
         <div class="p-1">
-            <div class="card shadow p-2 px-3">
+            <div class="card shadow p-2 px-3 h3">
                 <b>C</b>
             </div>
         </div>
         
         <div class="p-1">
-            <div class="card shadow py-2 px-3">
+            <div class="card shadow py-2 px-3 h3">
                 <b>A</b>
             </div>
         </div>
 
         <div class="p-1">
-            <div class="card shadow py-2 px-3">
+            <div class="card shadow py-2 px-3 h3">
                 <b>R</b>
             </div>
         </div>
         
         <div class="p-1">
-            <div class="card shadow py-2 px-3">
+            <div class="card shadow py-2 px-3 h3">
                 <b>D</b>
             </div>
         </div>
         
         <div class="p-1">
-            <div class="card shadow py-2 px-3">
+            <div class="card shadow py-2 px-3 h3">
                 <b>S</b>
             </div>
         </div>
@@ -64,12 +86,12 @@
     
     <div class="container mt-2">
         <div class="container text-center pb-5">
-            <h1>Cards With Images</h1>
+            <h1>Cards with images</h1>
         </div>
 
         <div class="row pb-4">
             <div class="col-md-4 p-2">
-                <div class="card rounded">
+                <div class="card card-cust rounded">
                     <img src="https://picsum.photos/300/250" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -86,7 +108,7 @@
                 </div>
             </div>
             <div class="col-md-4 p-2">
-                <div class="card rounded">
+                <div class="card card-cust rounded">
                     <img src="https://picsum.photos/seed/picsum/300/250" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -103,7 +125,7 @@
                 </div>
             </div>
             <div class="col-md-4 p-2">
-                <div class="card rounded">
+                <div class="card card-cust rounded">
                     <img src="https://picsum.photos/300/250?grayscale" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -122,12 +144,12 @@
         </div>
 
         <div class="container text-center py-5">
-            <h1>Cards With Headers</h1>
+            <h1>Cards with header And footer</h1>
         </div>
 
         <div class="row pb-4">
             <div class="col-md-4 p-2">
-                <div class="card rounded">
+                <div class="card card-cust rounded">
                     <div class="card-header"> Card Header</div>
                     <div class="card-body">
                         <h5 class="card-title">
@@ -141,10 +163,11 @@
                         </p>
                         <a href="" class="btn btn-primary"> Go Somewhere </a>
                     </div>
+                    <div class="card-footer">Card Footer</div>
                 </div>
             </div>
             <div class="col-md-4 p-2">
-                <div class="card rounded">
+                <div class="card card-cust rounded">
                     <div class="card-header"> Card Header</div>
                     <div class="card-body">
                         <h5 class="card-title">
@@ -158,10 +181,11 @@
                         </p>
                         <a href="" class="btn btn-primary"> Go Somewhere </a>
                     </div>
+                    <div class="card-footer">Card Footer</div>
                 </div>
             </div>
             <div class="col-md-4 p-2">
-                <div class="card rounded">
+                <div class="card card-cust rounded">
                     <div class="card-header">Card Header</div>
                     <div class="card-body">
                         <h5 class="card-title">
@@ -175,11 +199,167 @@
                         </p>
                         <a href="" class="btn btn-primary"> Go Somewhere </a>
                     </div>
+                    <div class="card-footer">Card Footer</div>
                 </div>
             </div>
         </div>
+
+        <div class="container text-center py-5">
+            <h1>Cards aligned with card group</h1>
+        </div>
+
+        <div class="card-group pb-4">
+            <!-- <div class="card p-2 border-0"> -->
+                <div class="card card-cust rounded">
+                    <img src="https://picsum.photos/300/250?blur" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Card title
+                        </h5>
+            
+                        <p class="card-text">
+                            card text card text card text card text card text
+                            card text card text card text card text card text 
+                        </p>
+                        <a href="" class="btn btn-primary"> Go Somewhere </a>
+                    </div>
+                    <div class="card-footer">Card Footer</div>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="card p-2 border-0"> -->
+                <div class="card card-cust rounded">
+                    <img src="https://picsum.photos/id/1/300/250" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Card title
+                        </h5>
+            
+                        <p class="card-text">
+                            card text card text card text card text card text
+                            card text card text card text card text card text
+                        </p>
+                        <a href="" class="btn btn-primary"> Go Somewhere </a>
+                    </div>
+                    <div class="card-footer">Card Footer</div>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="card p-2 border-0"> -->
+                <div class="card card-cust rounded">
+                    <img src="https://picsum.photos/id/10/300/250" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Card title
+                        </h5>
+            
+                        <p class="card-text">
+                            card text card text card text card text card text
+                            card text card text card text card text card text
+                        </p>
+                        <a href="" class="btn btn-primary"> Go Somewhere </a>
+                    </div>
+                    <div class="card-footer">Card Footer</div>
+                </div>
+            <!-- </div> -->
+        </div>
+        
+        <div class="container text-center py-5">
+            <h1>Cards aligned with horizontal image</h1>
+        </div>
+
+        <div class="row pb-4">
+            <div class="col">
+                <div class="card card-cust rounded">
+                    <div class="row">
+                        <div class="col-md-4 p-0">
+                            <img src="" class="img-fluid w-100 rounded-start img-src" alt="">
+                        </div>
+                        <div class="col-md-8 p-0">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Card title
+                                </h5>
+                                
+                                <p class="card-text">
+                                    card text card text card text card text card text
+                                    card text card text card text card text card text 
+                                </p>
+                                <a href="" class="btn btn-primary"> Go Somewhere </a>
+                            </div>
+                            <div class="card-footer">Card Footer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="card card-cust rounded">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="" class="img-fluid rounded-start-top img-src" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Card title
+                                </h5>
+                    
+                                <p class="card-text">
+                                    card text card text card text card text card text
+                                    card text card text card text card text card text 
+                                </p>
+                                <a href="" class="btn btn-primary"> Go Somewhere </a>
+                            </div>
+                            <div class="card-footer">Card Footer</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-4">
+                <div class="card card-cust rounded ">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="" class="img-fluid rounded-start img-src" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Card title
+                                </h5>
+                    
+                                <p class="card-text">
+                                    card text card text card text card text card text
+                                    card text card text card text card text card text 
+                                </p>
+                                <a href="" class="btn btn-primary"> Go Somewhere </a>
+                            </div>
+                            <div class="card-footer">Card Footer</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
     </div>
     
+    <script>
+        const body = document.getElementsByTagName('body')[0];
+        const spinner = document.getElementById('spinner');
+        const imgSrc = document.getElementsByClassName('img-src');
+
+        for(let i = 0; i < imgSrc.length; i++){
+            const img = imgSrc[i];
+            const id = Math.floor(Math.random() * 220);
+
+            img.src = `https://picsum.photos/id/${id}/300/250`
+        }
+
+        window.onload = () => {
+            spinner.classList.add('fadeOut');
+
+            setTimeout(() => {
+                spinner.classList.add('d-none');
+            },1000)
+            
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
