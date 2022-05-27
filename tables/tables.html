@@ -57,12 +57,12 @@
             </tr>
 
             <tr>
-                <td class="border p-2">T</td>
-                <td class="border p-2">A</td>
-                <td class="border p-2">B</td>
-                <td class="border p-2">L</td>
-                <td class="border p-2">E</td>
-                <td class="border p-2">S</td>
+                <td class="border p-2 col">T</td>
+                <td class="border p-2 col">A</td>
+                <td class="border p-2 col">B</td>
+                <td class="border p-2 col">L</td>
+                <td class="border p-2 col">E</td>
+                <td class="border p-2 col">S</td>
             </tr>
         </table>
     </header>
@@ -72,7 +72,94 @@
     </div>
 
     <div class="container mt-2">
-        
+        <div class="container text-center pb-5">
+            <h1>Responsive Table</h1>
+        </div>
+
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover caption-top">
+                    <caption>Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">header</th>
+                            <th scope="col">header</th>
+                            <th scope="col">header</th>
+                            <th scope="col">header</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+
+        <div class="container text-center py-5">
+            <h1>Unresponsive table</h1>
+        </div>
+
+        <div class="container">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">header</th>
+                        <th scope="col">header</th>
+                        <th scope="col">header</th>
+                        <th scope="col">header</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+
+
     </div>
     
     <script src="../js/loader.js"></script>
