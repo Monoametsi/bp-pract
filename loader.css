@@ -1,0 +1,15 @@
+.loader{
+    z-index: 50;
+    background-color: rgba(0,0,0,1);
+}
+
+.fadeOut{
+    transition: 0.3;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+}
+
+@keyframes fadeOut{
+    0%{ opacity: 1;}
+    100%{ opacity: 0; }
+}
