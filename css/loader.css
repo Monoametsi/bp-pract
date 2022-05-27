@@ -1,3 +1,7 @@
+body{
+    background-color: #eee7;
+}
+
 .loader{
     z-index: 50;
     background-color: rgba(0,0,0,1);
