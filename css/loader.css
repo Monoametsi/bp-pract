@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 body{
     background-color: #eee7;
 }
 
 .loader{
-    z-index: 50;
+    z-index: 5000;
     background-color: rgba(0,0,0,1);
 }
 
