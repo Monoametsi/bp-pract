@@ -11,14 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        /* .offcanvas{
-          z-index: 1100;
-        } */
-
-        /* body{
-          height: 400vh;
-        } */
-
         .nav-tabs, .nav-tabs > .active{
             border-color: #fff #fff #fff !important;
         } 
@@ -26,11 +18,6 @@
         .page-title{
             text-shadow: -1px -1px 0 rgba(0, 0, 0, 1), 1px -1px 0 rgba(0, 0, 0, 1), -1px 1px 0 rgba(0, 0, 0, 1), 1px 1px 0 rgba(0, 0, 0, 1);
         }
-
-        /* .navbar-brand{
-            font-size: 1.8rem;
-            font-family: 'Pacifico', cursive;
-        } */
     </style>
 </head>
 <body>
@@ -42,10 +29,8 @@
     </div>
 
     <nav class="nav justify-content-center shadow mb-5 p-3 nav-tabs">
-        <a href="#" class="nav-link">Nav</a>
-        <a href="#" class="nav-link active">Tab</a>
-        <a href="#" class="nav-link">Nav</a>
-        <a href="#" class="nav-link active">Tab</a>
+        <a href="#" class="nav-link">Navs</a>
+        <a href="#" class="nav-link active">Tabs</a>
     </nav>
 
     <div class="container d-flex justify-content-center mb-5">
@@ -61,7 +46,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <h3 class="text-center mb-3">Left Alignment</h3>
-                    <nav class="nav rounded shadow mb-5 p-3">
+                    <nav class="nav flex-column flex-sm-row rounded shadow mb-5 p-3">
                         <a href="#" class="nav-link active">Active</a>
                         <a href="#" class="nav-link">Link</a>
                         <a href="#" class="nav-link">Link</a>
@@ -70,7 +55,7 @@
                 </div>
                 <div class="col-lg-4">
                     <h3 class="text-center mb-3">Center Alignment</h3>
-                    <nav class="nav rounded shadow mb-5 p-3 justify-content-center">
+                    <nav class="nav flex-column flex-sm-row rounded shadow mb-5 p-3 align-items-center justify-content-center">
                         <a href="#" class="nav-link active">Active</a>
                         <a href="#" class="nav-link">Link</a>
                         <a href="#" class="nav-link">Link</a>
@@ -79,7 +64,7 @@
                 </div>
                 <div class="col-lg-4">
                     <h3 class="text-center mb-3">Right Alignment</h3>
-                    <nav class="nav rounded shadow mb-5 p-3 justify-content-end ">
+                    <nav class="nav rounded shadow mb-5 p-3 justify-content-end align-items-end flex-column flex-sm-row">
                         <a href="#" class="nav-link active">Active</a>
                         <a href="#" class="nav-link">Link</a>
                         <a href="#" class="nav-link">Link</a>
@@ -95,7 +80,7 @@
 
         <div class="container mb-5">
             <div class="container bg-dark p-3 rounded">
-                <nav class="nav nav-tabs shadow">
+                <nav class="nav flex-column flex-sm-row nav-tabs shadow">
                     <a href="#" class="nav-link active">Active</a>
                     <a href="#" class="nav-link">Link</a>
                     <a href="#" class="nav-link">Link</a>
@@ -105,17 +90,121 @@
         </div>
 
         <div class="container text-center py-5">
+            <h1>Tabs with dropdown</h1>
+        </div>
+
+        <div class="container mb-5">
+            <ul class="nav flex-column flex-sm-row nav-tabs rounded shadow mb-5 p-3">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Active</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" class="dropdown-item">Action</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Another Action</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Something else</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container text-center py-5">
             <h1>Pills</h1>
         </div>
 
         <div class="container">
-            <div class="container">
-                <nav class="nav nav-pills rounded shadow mb-5 p-3">
-                    <a href="#" class="nav-link active">Active</a>
-                    <a href="#" class="nav-link">Link</a>
-                    <a href="#" class="nav-link">Link</a>
-                    <a href="#" class="nav-link disabled">Disabled</a>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center mb-3">Regular Nav Pill</h3>
+                    <nav class="nav nav-pills rounded shadow mb-5 p-3 flex-column flex-sm-row">
+                        <a href="#" class="nav-link active">Active</a>
+                        <a href="#" class="nav-link">Link</a>
+                        <a href="#" class="nav-link">Link</a>
+                        <a href="#" class="nav-link disabled">Disabled</a>
+                    </nav>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center mb-3">Fill Nav Pill</h3>
+                    <nav class="nav nav-pills nav-fill rounded shadow mb-5 p-3 flex-column flex-sm-row">
+                        <a href="#" class="nav-link active">Active</a>
+                        <a href="#" class="nav-link">Link</a>
+                        <a href="#" class="nav-link">Link</a>
+                        <a href="#" class="nav-link disabled">Disabled</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center py-5">
+            <h1>Pills with dropdown</h1>
+        </div>
+
+        <div class="container">
+            <ul class="nav nav-pills flex-column flex-sm-row rounded shadow mb-5 p-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+        </div>
+
+        <div class="container text-center py-5">
+            <h1>Nav with tabbable panes</h1>
+        </div>
+
+        <div class="container">
+            <div class="container bg-dark text-white rounded shadow p-3 mb-5">
+                <nav>
+                    <div class="nav nav-tabs flex-column flex-sm-row" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+                        <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+                    </div>
                 </nav>
+
+                <div class="tab-content mt-3" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        This is some placeholder content the Home tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                        This is some placeholder content the Profile tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                        This is some placeholder content the Contact tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+                    </div>
+                    <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+                        This is some placeholder content the Disabled tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+                    </div>
+                </div>
             </div>
         </div>
 
